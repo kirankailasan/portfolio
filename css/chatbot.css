@@ -181,7 +181,8 @@
         position: absolute !important;
         right:0;
       }
-
+        #user-message{
+            width: 30% !important;
 
     
 }  
