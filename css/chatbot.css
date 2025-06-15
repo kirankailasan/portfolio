@@ -172,6 +172,9 @@
         right: 17% !important;
 
       }
+    #chat-input {
+        width: 100% !important;
+      }
     
 }  
 
