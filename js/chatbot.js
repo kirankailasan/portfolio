@@ -85,6 +85,7 @@ function waveTwiceThenPose() {
         if (e.action === actions["wave"]) {
             mixer.removeEventListener('finished', handler);
             document.getElementById('message').style.display = "block";
+            document.getElementById('chatbot-icon').style.display = "block";
             playAnimation("pose", true);
         }
     });
