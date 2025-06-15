@@ -12,6 +12,7 @@
     margin-right: 32px;
     cursor: pointer;
     z-index: 9999;
+    display: none;
   }
   
   #chatbot-model {
