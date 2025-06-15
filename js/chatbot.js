@@ -211,7 +211,7 @@ sendMessageBtn.addEventListener("click", () => {
     chatContainer.scrollTop = chatContainer.scrollHeight;
 
     // Send the user message to the backend chatbot API
-    fetch("http://tguideapp.pythonanywhere.com/chatbot/", {
+    fetch("https://tguideapp.pythonanywhere.com/chatbot/", {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
