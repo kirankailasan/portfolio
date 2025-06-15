@@ -172,29 +172,7 @@
         right: 17% !important;
 
       }
-#chat-input {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  width: 100%;
-  position: relative;
-  box-sizing: border-box;
-  padding: 5px;
-  gap: 5px;
-}
 
-#chat-input input {
-  flex: 1;
-  padding: 8px;
-  font-size: 0.85rem;
-  box-sizing: border-box;
-}
-
-#chat-input button {
-  padding: 8px 12px;
-  font-size: 0.85rem;
-  box-sizing: border-box;
-}
 
     
 }  
