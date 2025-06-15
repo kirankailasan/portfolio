@@ -173,9 +173,15 @@
         right: 17% !important;
 
       }
-    #chat-input {
+        #chat-input {
         width: 280px !important;
+        position: relative;
       }
+      #send-message{
+        position: absolute !important;
+        right:0;
+      }
+
 
     
 }  
