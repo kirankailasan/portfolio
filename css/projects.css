@@ -1,0 +1,224 @@
+body{
+    font-family: Georgia, serif;
+    
+}
+.container{
+    display: flex;
+    position: absolute;
+    right: 0;
+    left: 0;
+    justify-content: center;
+    
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    flex-direction: row;
+    z-index: 20;
+    gap: 5%;
+}
+.container1{
+    width: 60%;
+    height: 60%;
+    background-color: rgba(255, 255, 255, 0.238);
+    box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.9);
+    border-radius: 20px;
+    position: relative;
+}
+video{
+    width: 100%; height: 100%;
+    border-radius: 20px;
+    object-fit: cover
+}
+
+
+.container2{
+    width: fit-content;
+    height: 50%;
+    color: white;
+    font-size: 1.5em;
+    
+}
+
+.container2 div{
+    transition: transform 0.3s ease-in-out;
+    display: flex;
+    flex-direction:inherit column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    left: 10px;
+    height: 60px;
+    
+}
+.container2 div span:hover{
+
+    cursor: pointer;
+    transform: scale(0.9);
+    transition: all 0.3s ease-in-out;
+
+}
+
+
+.container2 div img{
+    width: 30px;
+}
+.container2 div::before{
+        content: "➜";
+
+        align-items: center;
+
+      transform: translateY(-50%) translateX(-10px);
+      opacity: 0;
+      transition: all 0.3s ease;
+      color: rgb(255, 255, 255);
+
+}
+
+
+.container2 div:hover::before{
+    transform: translateY(-50%) translateX(0);
+    opacity: 1;
+
+
+}
+
+
+.viewweb{
+    text-decoration: none;
+    background-image: linear-gradient(to bottom, rgb(15, 20, 179, 0.6), rgba(21, 143, 213, 0.6));
+    width: 100px;
+    color: white;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 30;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+    font-family: 'calibri';
+    transform: scale(0.8);
+    
+}
+.viewweb:hover{
+    transform: scale(0.9);
+    transition: all 0.3s ease-in-out;
+}
+
+.container1:hover .viewweb,
+.container1:hover .shade{
+    opacity: 1;
+    transition: all 0.3s ease-in-out;
+}
+.shade{
+    position: absolute;
+    z-index: 29;
+    
+
+    top:0;
+    bottom: 0;
+        width: 100%;
+    height: 100%;
+
+    background-color: rgba(0, 0, 0, 0.671);
+    border-radius: 20px;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+}
+.shade:hover{
+    cursor: pointer;
+}
+
+@media (max-width: 768px){
+
+    .container{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .container1{
+        width: 90%;
+        height: auto;
+    }
+    .container1 a {
+        text-align: center !important;
+
+    }
+    .container2{
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap:10px;
+    }
+    .container2 div{
+        width: fit-content;
+        padding: 10px;
+        border-radius: 15px;
+        box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.9);
+    }
+    .container2 div img{
+        display: none;
+    }
+    .viewweb{
+        width: 80px;
+        height: 80px;
+    }
+    h1{
+        position: absolute !important;
+        top: 10% !important;
+        left:0 !important;
+        right: 0 !important;
+        display:flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        margin: 0 auto !important;
+        text-align: center !important;
+    }
+}
+
+
+/* loader*/
+.container1 {
+  position: relative;
+
+}
+
+/* Loader overlay */
+#video-loader {
+  display: none; /* hidden by default */
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.524); /* semi-transparent black */
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+}
+
+/* Show loader when class is added */
+#video-loader.show {
+  display: flex !important;
+}
+
+/* Spinner animation */
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 5px solid #fff;
+  border-top: 5px solid #3498db; /* Blue accent */
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+/* Keyframe for spinner */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

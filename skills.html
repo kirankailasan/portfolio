@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>My skills</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vanta@0.5.21/dist/vanta.waves.min.js"></script>
+        <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+        <script src="https://cdn.tailwindcss.com"></script>
+      
+        <link rel="stylesheet" href="css/navbar.css">
+        <link rel="stylesheet" href="css/skills.css">
+        <link rel="stylesheet" href="css/loader.css">
+
+    </head>
+
+    <body>
+      <div id="vanta-bg"></div>
+            <div id="loading">
+          <div id="loader">
+            <div class="ls-particles ls-part-1"></div>
+            <div class="ls-particles ls-part-2"></div>
+            <div class="ls-particles ls-part-3"></div>
+            <div class="ls-particles ls-part-4"></div>
+            <div class="ls-particles ls-part-5"></div>
+            <div class="lightsaber ls-left ls-green"></div>
+            <div class="lightsaber ls-right ls-red"></div>
+          </div>
+        </div>
+       <div id="body">
+         <navbar class="body">
+            <div id="sidebar" class="sidebar">
+                <div class="sidetoggle">
+                <button id="togglebtn" class="togglebtn">
+                    <img id="img" src="images/sidebar.png" alt="Toggle">
+                </button>
+                </div>
+            <div class=" text-white w-full max-w-xs min-h-screen p-4">
+            <!-- Logo/Header -->
+            <div class="logo mb-6 text-center">
+                <h2 class="text-2xl font-bold tracking-wide">kiran/skills</h2>
+            </div>
+            <hr class="border-gray-700 mb-4">
+
+            <!-- Navigation Menu -->
+            <ul id="menu" class="space-y-4 font-[Orbitron] text-lg text-white">
+            <li>
+                <a href="index.html" class="flex items-center space-x-4 p-3 rounded-xl  transition duration-300 no-underline">
+                <img src="images/home.png" class="w-6 h-6" alt="Home Icon">
+                <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="projects.html" class="flex items-center space-x-4 p-3 rounded-xl k transition duration-300 no-underline">
+                <img src="images/projects.png" class="w-6 h-6" alt="Projects Icon">
+                <span>Projects</span>
+                </a>
+            </li>
+            <li>
+                <a href="about.html" class="flex items-center space-x-4 p-3 rounded-xl  transition duration-300 no-underline">
+                <img src="images/about.png" class="w-6 h-6" alt="About Icon">
+                <span>About</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="contact.html" class="flex items-center space-x-4 p-3 rounded-xl transition duration-300 no-underline">
+                <img src="images/phone.png" class="w-6 h-6 rounded-full bg-white p-1" alt="Contact Icon">
+                <span>Contact</span>
+                </a>
+            </li>
+            <br><br>
+            <hr class="border-gray-700 mb-4">
+            <li><a href="tel:+919544953662" target="_blank" class="links">Mobile No: 9544953662</a></li>
+            <li><a href="mailto:kirankailasan5@gmail.com" target="_blank" class="links">Email: kirankailasan5@gmail.com</a></li>
+            </ul>
+            </div>
+  </div>
+  <script src="js/navbar.js"></script>
+</navbar>
+
+
+
+
+
+<div id="container">
+
+<section class="skills-section">
+  <h1>My Skills</h1><br><br>
+
+  <div class="skills-category">
+    <h2 class="text-3xl font-bold bg-gradient-to-r from-red-500 to-orange-400 bg-clip-text text-transparent w-fit">Frontend Development</h2><br>
+    <ul class ="skills1">
+      <li><img src="skills/html.png"> <a>HTML5</a></li>
+      <li><img src="skills/css.png"><a>CSS3</a></li>
+      <li><img src="skills/js.png"><a>JavaScript</a></li>
+      <li><img src="skills/bootstrap.png"><a>Bootstrap CSS</a></li>
+      
+      <li><img src="skills/threejs.png"><a>Three.js</a></li>
+
+      <li><img src="skills/tailwind.png"><a>Tailwind CSS</a></li>
+    </ul>
+  </div><br><br>
+
+  <div class="skills-category">
+    <h2 class="text-3xl font-bold bg-gradient-to-r from-green-400 to-emerald-500 bg-clip-text text-transparent w-fit">Backend Development</h2><br>
+    <ul class="skills1">
+      <li><img src="skills/python.png"><a>Python</a></li>
+      <li><img src="skills/django.png"><a>Django</a></li>
+
+    </ul>
+  </div><br><br>
+
+
+
+  <div class="skills-category">
+    <h2 class="text-3xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent w-fit">APIs & AI Integration</h2><br>
+    <ul class="skills2">
+      <li>OpenAI (Chatbot / itinerary generation)</li>
+      <li>Google Maps API</li>
+      <li>GeoLocation & Location Permissions</li>
+    </ul>
+  </div><br><br>
+
+  <div class="skills-category">
+    <h2 class="text-3xl font-bold bg-gradient-to-r from-fuchsia-500 to-red-400 bg-clip-text text-transparent w-fit">Database & Hosting</h2><br>
+    <ul class="skills2">
+      <li>SQLite</li>
+      <li>PythonAnywhere (backend hosting)</li>
+    </ul>
+  </div><br><br>
+
+  <div class="skills-category">
+    <h2 class="text-3xl font-bold bg-gradient-to-r from-purple-500 to-violet-400 bg-clip-text text-transparent w-fit">Version Control & Tools</h2><br>
+    <ul class="skills2">
+      <li>Git & GitHub</li>
+      <li>Visual Studio Code</li>
+      <li>Figma (basic prototyping)</li>
+    </ul>
+  </div><br><br>
+
+    <div class="skills-category">
+    <h2 class="text-3xl font-bold bg-gradient-to-r from-sky-400 to-teal-600 bg-clip-text text-transparent w-fit">App & Hybrid Development</h2><br>
+    <ul class="skills2">
+      <li>Capacitor.js</li>
+      <li>Progressive Web Apps (PWA)</li>
+      <li>Local storage for assets (e.g., 3D models)</li>
+    </ul>
+  </div><br><br>
+</section>
+
+
+</div>
+
+
+       </div>
+
+
+
+
+
+
+
+
+<script src="js/loader.js"></script>
+<script src="js/vanta.js"></script>
+    </body>
+</html>

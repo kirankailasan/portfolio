@@ -1,0 +1,275 @@
+    body {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background: transparent !important;
+      font-family: 'Poppins', sans-serif;
+    }
+#mobile-warning{
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #ffdddd;
+  color: #900;
+  padding: 15px;
+  text-align: center;
+  font-weight: bold;
+  z-index: 100000;
+  font-family: sans-serif;
+   opacity: 0;
+   transition: opacity 0.5s ease;
+   pointer-events: none;
+  
+}
+#mobile-warning.show {
+
+  animation: fadeInOut 4s ease forwards;
+}
+
+@keyframes fadeInOut {
+  0% { opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+  .hero-name {
+    font-family: 'Orbitron', sans-serif;
+    text-transform: uppercase;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 3.5rem;
+    letter-spacing: 3px;
+    text-shadow: 
+      1px 1px 0 #00f7ff, 
+      2px 2px 0 #0ff, 
+      3px 3px 5px #0ff;
+  }
+
+  .glow-text {
+    color: #ffffff;
+    text-shadow: 0 0 10px #00f7ff, 0 0 20px #00f7ff, 0 0 30px #00f7ff;
+  }
+
+ 
+ 
+
+
+
+
+
+
+
+    #container{
+      position: absolute;
+      width: 100%;
+      z-index: 11;
+ 
+      
+    }
+
+
+.hero-container {
+    
+    background: rgb(18, 18, 18, 0.5);
+    box-shadow: 4px 4px 12px rgba(255, 255, 255, 0.3);
+    border: 2px solid white;
+    transition: all 0.3s ease-in-out;
+}
+.hero-container:hover {
+    transform: scale(1.05);
+    animation: shake 0.5s ease-in-out;
+    box-shadow: 4px 4px 12px rgba(255, 255, 255, 0.9);
+    transition: all 0.3s ease-in-out;
+}
+    
+@keyframes shake {
+    0%, 100% { transform: translateX(0) scale(1.05); }
+    25% { transform: translateX(-5px) scale(1.05); }
+    75% { transform: translateX(5px) scale(1.05); }
+}
+
+.cursor-box {
+
+    max-width: 850px;
+    height: auto;
+
+    border-radius: 12px;
+    
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    text-align: center;
+    padding: 25px;
+    position: relative;
+    overflow: hidden;
+}
+
+.cursor-box::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, transparent, rgba(255,255,255,0.1), transparent);
+    top: -100%;
+    left: -100%;
+    transition: all 0.5s ease;
+}
+
+.cursor-box:hover::before {
+    top: 100%;
+    left: 100%;
+}
+
+
+@keyframes mask-move {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(160px); /* 179px - 50px = 129px */
+  }
+}
+
+@keyframes mask-inner-move {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-160px); /* -(179px - 50px) = -129px */
+  }
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+/* Add a hero container in your HTML and target it for hover */
+.hero-container:hover .focus:after {
+  animation: mask-move 1s linear infinite alternate;
+}
+
+.hero-container:hover .focus--mask {
+  animation: mask-move 1s linear infinite alternate;
+}
+
+.hero-container:hover .focus--mask-inner {
+  animation: mask-inner-move 1s linear infinite alternate;
+}
+
+/* Original focus styles (no changes needed here for the animation trigger) */
+.focus {
+  text-transform: uppercase;
+  color: white;
+  letter-spacing: 0.2rem;
+  line-height: 1;
+  position: relative;
+  width: 179px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.focus:before{
+  content: 'KIRAN';
+}
+.hero-container:hover .focus:before {
+  content: 'KIRAN';
+  filter: blur(3px);
+}
+.focus:after {
+  content: '';
+  position: absolute;
+  width: 50px;
+  height: calc(100% + 8px);
+  top: -4px; /* -(8px / 2) = -4px */
+  left: 0;
+  border-top: 2px solid;
+  border-bottom: 2px solid;
+  opacity: 0;
+  /* Remove animation from here, it will be added on hover */
+}
+.focus--mask {
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  width: 50px;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(255, 255, 255, 0.467);
+  /* Remove animation from here, it will be added on hover */
+}
+.hero-container:hover .focus--mask, .hero-container:hover .focus:after{
+  opacity:1 ;
+}
+
+
+#see-my-works {
+  position: relative;
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: white;
+  color: black;
+  font-weight: 600;
+  border-radius: 9999px;
+  text-decoration: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+}
+
+#see-my-works:hover {
+  background-color: #e5e5e5;
+  transform: scale(1.05);
+
+
+}
+
+#see-my-works::after {
+  content: "";
+  position: absolute;
+  left: 24px; /* match padding-left */
+  bottom: 15px;
+  width: 0;
+  height: 2px;
+  border-radius:1px;
+  background-color: black;
+  transition: width 0.3s ease;
+}
+
+#see-my-works:hover::after {
+  width: calc(100% - 48px); /* full width minus left/right padding */
+}
+
+#resume{
+  transition: all 0.3s ease-in-out;
+  text-decoration: none;
+}
+
+#resume:hover{
+  background-color: white;
+
+  color: black !important;
+  transform: scale(1.05);
+  transition: all 0.3s ease-in-out;
+}
+
+@media(max-width:768px){
+  #options{
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+  }
+  #options a{
+    text-align: center !important;
+    display: flex !important;
+    justify-content: center !important;
+    margin: 0 auto;
+    width: fit-content !important;
+
+  }
+}

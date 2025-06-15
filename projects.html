@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My Works</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/sirxemic/jquery.ripples@master/dist/jquery.ripples-min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vanta@0.5.21/dist/vanta.waves.min.js"></script>
+        <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+        <link rel="stylesheet" href="css/navbar.css">
+        <link rel="stylesheet" href="css/projects.css">
+         <link rel="stylesheet" href="css/loader.css">
+        <script src="https://cdn.tailwindcss.com"></script>
+
+    </head>
+
+    <body>
+        <div id="vanta-bg"></div>
+<div class="ripple-background"></div>
+        <div id="loading">
+          <div id="loader">
+            <div class="ls-particles ls-part-1"></div>
+            <div class="ls-particles ls-part-2"></div>
+            <div class="ls-particles ls-part-3"></div>
+            <div class="ls-particles ls-part-4"></div>
+            <div class="ls-particles ls-part-5"></div>
+            <div class="lightsaber ls-left ls-green"></div>
+            <div class="lightsaber ls-right ls-red"></div>
+          </div>
+        </div>
+        <div id="body">
+            <navbar class="body">
+            <div id="sidebar" class="sidebar">
+                <div class="sidetoggle">
+                <button id="togglebtn" class="togglebtn">
+                    <img id="img" src="images/sidebar.png" alt="Toggle">
+                </button>
+                </div>
+            <div class=" text-white w-full max-w-xs min-h-screen p-4">
+            <!-- Logo/Header -->
+            <div class="logo mb-6 text-center">
+                <h2 class="text-2xl font-bold tracking-wide">kiran/projects</h2>
+            </div>
+            <hr class="border-gray-700 mb-4">
+
+            <!-- Navigation Menu -->
+            <ul id="menu" class="space-y-4 font-[Orbitron] text-lg text-white">
+            <li>
+                <a href="index.html" class="flex items-center space-x-4 p-3 rounded-xl  transition duration-300 no-underline">
+                <img src="images/home.png" class="w-6 h-6" alt="Home Icon">
+                <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="skills.html" class="flex items-center space-x-4 p-3 rounded-xl  transition duration-300 no-underline">
+                <img src="images/skill.png" class="w-6 h-6" alt="Home Icon">
+                <span>Skills</span>
+                </a>
+            </li>
+
+              <li>
+                <a href="about.html" class="flex items-center space-x-4 p-3 rounded-xl  transition duration-300 no-underline">
+                <img src="images/about.png" class="w-6 h-6" alt="About Icon">
+                <span>About</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="contact.html" class="flex items-center space-x-4 p-3 rounded-xl transition duration-300 no-underline">
+                <img src="images/phone.png" class="w-6 h-6 rounded-full bg-white p-1" alt="Contact Icon">
+                <span>Contact</span>
+                </a>
+            </li>
+            <br><br>
+            <hr class="border-gray-700 mb-4">
+            <li><a href="tel:+919544953662" target="_blank" class="links">Mobile No: 9544953662</a></li>
+            <li><a href="mailto:kirankailasan5@gmail.com" target="_blank" class="links">Email: kirankailasan5@gmail.com</a></li>
+            </ul>
+            </div>
+  </div>
+  <script src="js/navbar.js"></script>
+</navbar>
+
+
+
+<div class="container">
+    <div class="container1">
+    <a id="viewweb" href="http://tguide.pythonanywhere.com/" target="_blank" class="viewweb">View website</a>
+    <div class="shade"></div>
+        <div id="video-loader" class="loader-overlay">
+            <div class="spinner"></div>
+        </div>
+    <video id="videoPlayer" muted loop>
+      <source src="videos/tguide.mp4" type="video/mp4">
+      
+      Your browser does not support the video tag.
+    </video>
+
+    </div>
+    <div class="container2">
+
+        <h1 style="text-align: center;font-size: 2em;">My Works</h1><br>
+        <hr><hr>
+        <div>  <span onclick = "switchVideo('videos/tguide.mp4')">TGuide </span><span><a href="http://tguide.pythonanywhere.com/" target="_blank"><img  src="images/link.png"></a></span></div><hr>
+        <div > <span onclick="switchVideo('videos/crm.mp4')">CRM </span><span><a href="https://maharashtratandacrm.pythonanywhere.com/" target="_blank"><img src="images/link.png"></a></span></div><hr>
+        <div > <span onclick="switchVideo('videos/xploreintern.mp4')">XploreIntern </span><span><a href="https://maharashtratandacrm.pythonanywhere.com/" target="_blank"><img src="images/link.png"></a></span></div>
+        <hr>
+    </div>
+</div>
+        </div>
+
+<script>
+function switchVideo(videoFile) {
+  const video = document.getElementById('videoPlayer');
+  const viewweb = document.getElementById('viewweb');
+  const loader = document.getElementById('video-loader');
+
+  loader.classList.add('show'); // Show loader initially
+
+  video.pause();
+  video.querySelector('source').src = videoFile;
+  video.load();
+
+  // Monitor buffering progress
+  const checkBuffer = () => {
+    const buffered = video.buffered;
+    const duration = video.duration;
+
+    if (buffered.length) {
+      const bufferedEnd = buffered.end(buffered.length - 1);
+      const bufferedPercent = (bufferedEnd / duration) * 100;
+
+      if (bufferedPercent >= 10) {
+        loader.classList.remove('show'); // Hide loader at 10%
+        console.log("Buffer loaded 10% - hiding loader");
+      }
+    }
+  };
+
+  video.addEventListener('progress', checkBuffer);
+
+  // Re-show loader if video gets stuck/buffers
+  video.addEventListener('waiting', () => {
+    loader.classList.add('show');
+  });
+
+  // Hide loader again when playing resumes
+  video.addEventListener('playing', () => {
+    checkBuffer(); // in case enough is buffered
+  });
+
+  // Clean up old event listeners to avoid stacking
+  video.onloadedmetadata = () => {
+    video.removeEventListener('progress', checkBuffer);
+    video.addEventListener('progress', checkBuffer);
+  };
+
+  // Start video when ready to play
+  video.addEventListener('canplay', () => {
+    video.play();
+  }, { once: true });
+
+  // Update link
+  if (videoFile === "videos/tguide.mp4") {
+    viewweb.href = "http://tguide.pythonanywhere.com/";
+    viewweb.textContent = "View Website";
+  } else if (videoFile === "videos/xploreintern.mp4") {
+    viewweb.href = "https://github.com/kirankailasan/XploreIntern";
+    viewweb.textContent = "View in GitHub";
+  } else {
+    viewweb.href = "https://maharashtratandacrm.pythonanywhere.com/";
+    viewweb.textContent = "View Website";
+  }
+}
+
+</script>
+
+<script src="js/loader.js"></script>
+<script src="js/vanta.js"></script>
+    </body>
+</html>
