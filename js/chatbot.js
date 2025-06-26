@@ -31,7 +31,7 @@ const light = new THREE.AmbientLight(0xffffff, 1);
 scene.add(light);
 
 const loader = new THREE.GLTFLoader();
-loader.load('/models/chatbot.glb', function (gltf) {
+loader.load('models/chatbot.glb', function (gltf) {
     model = gltf.scene;
     model.scale.set(2.5, 2.5, 2.5);
     model.position.set(-0.5, -3, 0);
