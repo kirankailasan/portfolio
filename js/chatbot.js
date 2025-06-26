@@ -186,7 +186,7 @@ sendMessageBtn.addEventListener("click", () => {
     userMessageInput.value = "";
     chatContainer.scrollTop = chatContainer.scrollHeight;
 
-    fetch("http://tguideapp.pythonanywhere.com/chatbot/", {
+    fetch("https://tguideapp.pythonanywhere.com/chatbot/", {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
